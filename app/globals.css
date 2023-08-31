@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(6%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+      box-shadow: 0 2px 10px 0 #e392e1e1, 0 1px 14px 0 #df96dde1;
+
+    }   
+
+    50% {
+      transform: translateY(0);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+}
+.floating { 
+  animation-name: floating;
+  animation-duration:4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(10px, 18px); }
+  100%   { transform: translate(0, -0px); }   
+}
+.floating1 { 
+  animation-name: floating1;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating1 {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(18px, 10px); }
+  100%   { transform: translate(0, -0px); }   
+}
+.navbar-fixed {
+  animation: mymove 0.2s ease-in-out;
+  position: sticky;
+  @keyframes mymove {
+    from {
+      top: -20px;
+    }
+    to {
+      top: 0px;
+    }
+  }
+}
+
+.backdrop-blur {
+  --tw-backdrop-blur: blur(16px);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #da72d8e3;
+  border-radius: 10px;
+  /* border-radius: 20px; */
+}
+::-webkit-scrollbar-track {
+  background-color: #e9d7f1;
+}
