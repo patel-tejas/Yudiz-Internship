@@ -414,12 +414,6 @@ export default function Home({ params }) {
                 >
                   Create Form
                 </button>
-                <button
-                  onClick={createForm}
-                  className="inline-flex bg-[#a6792cdd] shadow-md hover:shadow-lg hover:bg-[#b9904af8] duration-300 items-center py-2 px-5 text-[90%]  text-white rounded-full"
-                >
-                  Create Form
-                </button>
               </div>
             </div>
 
