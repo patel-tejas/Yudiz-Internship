@@ -92,7 +92,7 @@ export default function Home({ params }) {
     <>
       <div className="flex flex-col space-y-10 ">
         <div
-          className="b mx-[6%] my-[4px] py-14 rounded-xl border-none shadow-xl "
+          className=" mx-[6%] my-[4px] py-14 rounded-xl border-none shadow-xl "
           style={{
             backgroundImage: "url(" + `${bg2.src}` + ")",
             // width: "100%",
@@ -420,16 +420,17 @@ export default function Home({ params }) {
             <div className="flex flex-col items-center gap-2 text-[80%] text-[rgba(56,56,56,0.93)]">
               <p className="text-center w-[95%]">
                 This content is created by the owner of the form. The data you
-                submit will be sent to the form owner. Microsoft is not
+                submit will be sent to the form owner. Yudiz is not
                 responsible for the privacy or security practices of its
                 customers, including those of this form owner. Never give out
                 your password.
               </p>
               <p className="text-center w-[55%]">
-                Powered by Yudiz Forms{" "}
-                <span className="cursor-pointer hover:text-decoration-line: underline">
-                  | Privacy and cookies | Terms of use{" "}
+                Powered by Yudiz Forms
+                <span className="cursor-pointer hover:underline">
+                  | Privacy and cookies | Terms of use
                 </span>
+                
               </p>
               <Image
                 src={logo}
