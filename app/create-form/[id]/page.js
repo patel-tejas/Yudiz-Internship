@@ -3,7 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 
 // import bg2 from "../../(components)/images/db1.jpg";
-import bg2 from "../../(components)/images/d11.jpeg";
+// import bg2 from "../../(components)/images/d25.png";
 import logo from "../../(components)/images/logo.png";
 
 export default function Home({ params }) {
@@ -72,11 +72,11 @@ export default function Home({ params }) {
       return;
     }
     const id = params.id;
-    const link = `https://yudiz-forms-backend.onrender.com/form/${id}`;
+    const link = `http://localhost:5000/form/${id}`;
     const data = { id, title, form: formContent, link: link };
     console.log(data);
     const response = await fetch(
-      "https://yudiz-forms-backend.onrender.com/create-form",
+      "http://localhost:5000/create-form",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -92,17 +92,26 @@ export default function Home({ params }) {
     <>
       <div className="flex flex-col space-y-10 ">
         <div
-          className=" mx-[6%] my-[4px] py-14 rounded-xl border-none shadow-xl "
-          style={{
-            backgroundImage: "url(" + `${bg2.src}` + ")",
-            // width: "100%",
-            // height: "80%",
-            position: "sticky",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-          }}
+          className=" mx-[6%] my-[4px] py-14 rounded-xl border-none  "
+          // style={{
+          //   backgroundImage: "url(" + `${bg2.src}` + ")",
+          //   // width: "100%",
+          //   // height: "80%",
+          //   position: "sticky",
+          //   backgroundRepeat: "no-repeat",
+          //   backgroundSize: "cover",
+          // }}
         >
-          <div className="mx-[10%] rounded-2xl py-6 px-6  bg-[#ffffff2a]  shadow-lg ">
+          <div 
+          //   style={{
+          //   backgroundImage: "url(" + `${bg2.src}` + ")",
+          //   // width: "100%",
+          //   // height: "80%",
+          //   position: "sticky",
+          //   backgroundRepeat: "no-repeat",
+          //   backgroundSize: "cover",
+          // }}
+          className="mx-[10%] rounded-2xl py-6 px-6  bg-[#ffffff2a]  shadow-lg ">
             <div className="flex flex-col py-2 space-y-2 p-10 rounded-xl pb-7 shadow-sm bg-[#ffffff39]">
               <input
                 type="text"
@@ -291,17 +300,18 @@ export default function Home({ params }) {
         </div>
 
         <div
-          className="b mx-[6%] my-[4px] py-12 rounded-lg border-none shadow-xl"
-          style={{
-            backgroundImage: "url(" + `${bg2.src}` + ")",
-            // width: "100%",
-            // height: "80%",
-            position: "sticky",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-          }}
+          className="b mx-[6%] my-[4px] py-12 rounded-lg border-none "
+          // style={{
+          //   backgroundImage: "url(" + `${bg2.src}` + ")",
+          //   // width: "100%",
+          //   // height: "80%",
+          //   position: "sticky",
+          //   backgroundRepeat: "no-repeat",
+          //   backgroundSize: "cover",
+          // }}
         >
-          <div className=" mx-[10%] rounded-lg py-6 px-6  bg-[#ffffff2a]">
+          <div  
+          className=" mx-[10%] rounded-lg py-6 px-6  bg-[#ffffff2a]">
             <h2 className="text-lg my-4 text-center ">Form Preview</h2>
 
             <div className="flex flex-col border-t-4 rounded-lg border-gray-700 px-4 py-2">

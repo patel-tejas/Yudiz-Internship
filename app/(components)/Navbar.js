@@ -3,6 +3,8 @@ import Image from "next/image";
 import logo from "./images/logo.png";
 import logo1 from "./images/logo1.png";
 import Account from "./images/Ac.png";
+import Link from "next/link";
+
 const Navbar = () => {
 return (
     <header className="text-gray-600 body-font bg:white  navbar-fixed  sticky z-10 top-[0.1px] ">
@@ -14,25 +16,25 @@ return (
           <div className="line h-0.5 w-6 my-1 bg-black"></div>
           </div>
           
-{/* <div className=" "> */}
-<Image
+{/* <Link href="/"> */}
+<Image    href="/"
           src={logo}
           className="mix-blend-multiply  cursor-pointer h-[12%] w-[18%] max-[650px]:w-[38%] max-[650px]:h-[32%] "
           width={10000}
           height={10000}
           alt="Picture of the Logo"
         />
-{/* </div> */}
+{/* </Link> */}
         <div className=" text-black flex gap-6 items-center justify-center max-[1200px]:me-[4%] max-[1000px]:me-[2%] max-[800px]:me-[0%] me-[6%] max-[650px]:hidden">
-          <a className="hover:text-[#353a47] text-[20px] relative after:bg-[#7E4684] after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer">
+          <Link href="/" className="hover:text-[#353a47] text-[20px] relative after:bg-[#7E4684] after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer">
             Home
-          </a>
-          <a   className="hover:text-[#353a47]  text-[20px] relative after:bg-[#7E4684] after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer">
+          </Link>
+          <Link href="/about"  className="hover:text-[#353a47]  text-[20px] relative after:bg-[#7E4684] after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer">
             About
-          </a>
-          <a className="hover:text-[#353a47]  text-[20px] relative after:bg-[#7E4684] after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer">
+          </Link>
+          <Link href="/contact" className="hover:text-[#353a47]  text-[20px] relative after:bg-[#7E4684] after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer">
             Contact
-          </a>
+          </Link>
         </div>
 {/* 
         <div className="flex flex-row gap-2 items-center ">
