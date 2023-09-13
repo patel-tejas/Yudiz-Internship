@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const getFields = async (formId) => {
     try {
-        const response = await fetch(`https://yudiz-forms-backend.onrender.com/form/${formId}`);
+        const response = await fetch(`http://localhost:5000/form/${formId}`);
         const fields = await response.json();
         const data = fields[0];
         return data
@@ -51,7 +51,7 @@ const page = async ({ params }) => {
         const id = field.id
         const user_data = { title, id, user_data: data }
         console.log(user_data);
-        const response = await fetch('https://yudiz-forms-backend.onrender.com/submit-form', {
+        const response = await fetch('http://localhost:5000/submit-form', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(user_data)
@@ -65,7 +65,7 @@ const page = async ({ params }) => {
             userDetails[field.question_type] = field.answer
         })
         console.log(userDetails);
-        const userInfo = await fetch('https://yudiz-forms-backend.onrender.com/submit-userdata', {
+        const userInfo = await fetch('http://localhost:5000/submit-userdata', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(userDetails)
@@ -76,7 +76,7 @@ const page = async ({ params }) => {
 
     const autoFill = async () => {
         const mobile= {mobile: "883929881"}
-        const userInfo = await fetch('https://yudiz-forms-backend.onrender.com/fetch-userdata', {
+        const userInfo = await fetch('http://localhost:5000/fetch-userdata', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(mobile)

@@ -15,7 +15,7 @@ const PORT = process.env.PORT
 app.use(express.json())
 app.use(cors({
     credentials: true,
-    origin: "https://yudiz-forms.netlify.app"
+    origin: "http://localhost:3000"
 }))
 
 // routes 
